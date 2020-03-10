@@ -1,0 +1,34 @@
+.missing {
+  width: 65%;
+  height: 350px;
+  max-height: 350px;
+}
+.missing header {
+  background-color: #B556FF;
+}
+.missing .text-missing {
+  max-height: 250px;
+  font-size: 1.28em;
+}
+.missing .text-missing a .fas.fa-user.fa-missing {
+  font-size: 1.22em;
+  text-decoration: none;
+  color: black;
+}
+
+.today {
+  width: 30%;
+  height: 350px;
+}
+.today header {
+  background-color: #FF993C;
+}
+
+.news {
+  width: 100%;
+}
+.news header {
+  background-color: #FF74D8;
+}
+
+/*# sourceMappingURL=home.css.map */
