@@ -1,3 +1,5 @@
+@import "variables";
+
 .missing {
   width: 65%;
   height: 350px;
@@ -27,11 +29,102 @@
   header {
     background-color: #FF993C;
   }
+
+  .text-today {
+    max-height: 250px;
+
+    article {
+      margin-bottom: 10px;
+      font-size: 1.6em;
+      width: 250px;
+      background-color: #15AD76;
+      padding: 10px;
+      border-radius: 5px;
+
+      &.weather-freezing {
+        background-color: #69b5ff;
+      }
+      &.weather-cold {
+        background-color: #5de3fc;
+      }
+      &.weather-warm {
+        background-color: #a5fc8f;
+      }
+      &.weather-hot {
+        background-color: #FC7765;
+      }
+
+      &.holiday {
+        background: rgba(226, 123, 123, 0.54);
+      }
+      &.birthdays {
+        background-color: #E7FC65;
+
+        &:hover {
+          cursor: pointer;
+        }
+      }
+
+    }
+  }
 }
 
 .news {
-  width: 100%;
+  width: 97%;
+  height: 700px;
   header {
     background-color: #FF74D8;
   }
+
+  .text-today {
+    margin: 20px;
+    max-height: 600px;
+
+    article {
+      font-size: 1.214em;
+      background-color: #f1f1f1;
+      padding: 15px;
+      margin-bottom: 20px;
+
+      &.management {
+        background-color: #ff3131;
+        color: white;
+      }
+      
+      &.broadcast {
+        background-color: #faff00;
+      }
+      
+      span.title {
+         font-weight: bold;
+       }
+    }
+  }
 }
+
+#birthdays-list {
+  z-index: $medium-z-index;
+  display: none;
+  position: fixed;
+  left: 50%;
+  top: 20%;
+  padding: 20px;
+  background-color: #faff00;
+  font-size: 1.429em;
+  border-radius: 5px;
+  box-shadow: 4px 4px 3px grey;
+
+  h2 {
+    margin: 5px 10px;
+  }
+
+  a {
+    text-decoration: none;
+    color: black;
+
+    &:hover {
+      background-color: #FF993C;
+    }
+  }
+}
+

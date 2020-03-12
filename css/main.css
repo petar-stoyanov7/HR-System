@@ -75,7 +75,7 @@ body {
 }
 .site-content .main-navbar {
   width: 15%;
-  height: 1000px;
+  min-height: 700px;
   background-color: #15AD76;
   padding-top: 100px;
 }
@@ -109,9 +109,11 @@ body {
 .site-content .main-content {
   width: 85%;
   padding: 20px 0 20px 20px;
+  background-color: #f4f4f4;
+}
+.site-content .main-content .flex-wrapper {
   display: flex;
   flex-wrap: wrap;
-  background-color: #f4f4f4;
 }
 .site-content .main-content .section-content {
   background: #FFFFFF;
@@ -205,6 +207,114 @@ body {
 }
 #calendar #calendar-content a.day.weekend {
   background-color: #E27B7B;
+}
+
+#black-overlay {
+  display: none;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 300;
+}
+
+#transparent-overlay {
+  display: none;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  bottom: 0;
+  z-index: 300;
+}
+
+#edit-user {
+  display: none;
+  position: fixed;
+  z-index: 500;
+  top: 15%;
+  left: 40%;
+  width: 700px;
+  background-color: #e1e8ff;
+  box-shadow: 5px 5px 5px black;
+  padding: 20px;
+  border-radius: 5px;
+}
+#edit-user h2 {
+  margin: 0 0 15px;
+}
+#edit-user form label, #edit-user form input, #edit-user form select {
+  font-size: 1.1em;
+  margin-bottom: 5px;
+}
+#edit-user form label {
+  display: inline-block;
+  width: 15%;
+}
+#edit-user form input, #edit-user form select {
+  display: inline-block;
+  width: 80%;
+}
+#edit-user form button[type=submit] {
+  padding: 5px;
+  border-radius: 3px;
+  background-color: #ff993c;
+  color: white;
+  font-size: 1.5em;
+  font-weight: bold;
+}
+#edit-user form fieldset {
+  margin-bottom: 10px;
+}
+#edit-user form fieldset legend {
+  border-radius: 3px;
+}
+#edit-user form fieldset.basic-info {
+  background-color: rgba(255, 181, 69, 0.3);
+  border: 1px solid #ffb545;
+}
+#edit-user form fieldset.basic-info legend {
+  background-color: rgba(255, 181, 69, 0.3);
+}
+#edit-user form fieldset.personal {
+  background-color: rgba(208, 224, 255, 0.3);
+  border: 1px solid #4894ff;
+}
+#edit-user form fieldset.personal legend {
+  background-color: rgba(208, 224, 255, 0.4);
+}
+#edit-user form fieldset.extras {
+  background-color: rgba(242, 255, 160, 0.3);
+  border: 1px solid #9aa76d;
+}
+#edit-user form fieldset.extras legend {
+  background-color: rgba(242, 255, 160, 0.3);
+}
+
+#new-leave {
+  display: none;
+  position: fixed;
+  background-color: #56d0aa;
+  top: 30%;
+  right: 20%;
+  z-index: 500;
+  border-radius: 3px;
+  padding: 10px;
+  box-shadow: 2px 2px 2px black;
+}
+#new-leave h4 {
+  margin: 0 0 10px;
+}
+#new-leave form textarea {
+  font-size: 1.1em;
+  display: block;
+  width: 300px;
+  height: 100px;
+  margin-bottom: 10px;
+}
+#new-leave form button {
+  padding: 5px;
+  border-radius: 3px;
 }
 
 /*# sourceMappingURL=main.css.map */

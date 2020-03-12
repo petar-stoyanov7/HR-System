@@ -6,16 +6,19 @@ const months = [
 ];
 const today = date.getUTCFullYear().toString() + date.getUTCMonth().toString() + date.getDate().toString();
 var calendarContainer;
+var transparentOverlay;
 var currentMonth = date.getMonth();
 var currentYear = date.getUTCFullYear();
-console.log(today);
 
 var toggleCalendar = function() {
     var calendar = $('#calendar');
+    var overlay = $('#transparent-overlay');
     if (calendar.is(":visible")) {
+        overlay.hide();
         calendar.hide();
     } else {
         resetDate();
+        overlay.show();
         calendar.show();
     }
 };
@@ -82,28 +85,16 @@ var drawCalendar = function(year,month) {
 
 $(document).ready(function(){
     calendarContainer = $('#calendar-content');
+    transparentOverlay = $('#transparent-overlay');
+    transparentOverlay.click(function(){
+        $('#calendar').hide();
+        transparentOverlay.hide();
+    });
     drawCalendar(currentYear, currentMonth);
     setMonth(currentMonth, currentYear);
     $('#month-backwards').on('keypress click', decreaseMonth);
     $('#month-forward').on('keypress click', increaseMonth);
 });
-
-// $(document).mouseup(function(e){
-//     var calendar = $('#calendar');
-//     var switcher = $('#toggle-calendar');
-//     console.log(e.target);
-//     if (!switcher.find(e.target).length || !switcher.is(e.target)) {
-//         console.log('kur');
-//     }
-//
-//     if (
-//         !calendar.is(e.target) &&
-//         (!switcher.find(e.target).length || !switcher.is(e.target)) &&
-//         calendar.is(':visible')
-//     ) {
-//         calendar.hide();
-//     }
-// });
 
 /*
 {day: 27, weekDay: 5, month: 2, year: 2020}

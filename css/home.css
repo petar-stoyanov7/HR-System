@@ -23,12 +23,88 @@
 .today header {
   background-color: #FF993C;
 }
+.today .text-today {
+  max-height: 250px;
+}
+.today .text-today article {
+  margin-bottom: 10px;
+  font-size: 1.6em;
+  width: 250px;
+  background-color: #15AD76;
+  padding: 10px;
+  border-radius: 5px;
+}
+.today .text-today article.weather-freezing {
+  background-color: #69b5ff;
+}
+.today .text-today article.weather-cold {
+  background-color: #5de3fc;
+}
+.today .text-today article.weather-warm {
+  background-color: #a5fc8f;
+}
+.today .text-today article.weather-hot {
+  background-color: #FC7765;
+}
+.today .text-today article.holiday {
+  background: rgba(226, 123, 123, 0.54);
+}
+.today .text-today article.birthdays {
+  background-color: #E7FC65;
+}
+.today .text-today article.birthdays:hover {
+  cursor: pointer;
+}
 
 .news {
-  width: 100%;
+  width: 97%;
+  height: 700px;
 }
 .news header {
   background-color: #FF74D8;
+}
+.news .text-today {
+  margin: 20px;
+  max-height: 600px;
+}
+.news .text-today article {
+  font-size: 1.214em;
+  background-color: #f1f1f1;
+  padding: 15px;
+  margin-bottom: 20px;
+}
+.news .text-today article.management {
+  background-color: #ff3131;
+  color: white;
+}
+.news .text-today article.broadcast {
+  background-color: #faff00;
+}
+.news .text-today article span.title {
+  font-weight: bold;
+}
+
+#birthdays-list {
+  z-index: 500;
+  display: none;
+  position: fixed;
+  left: 50%;
+  top: 20%;
+  padding: 20px;
+  background-color: #faff00;
+  font-size: 1.429em;
+  border-radius: 5px;
+  box-shadow: 4px 4px 3px grey;
+}
+#birthdays-list h2 {
+  margin: 5px 10px;
+}
+#birthdays-list a {
+  text-decoration: none;
+  color: black;
+}
+#birthdays-list a:hover {
+  background-color: #FF993C;
 }
 
 /*# sourceMappingURL=home.css.map */

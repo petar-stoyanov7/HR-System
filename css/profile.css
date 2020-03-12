@@ -1,0 +1,336 @@
+a.edit-button {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  border-radius: 50px;
+  background-color: grey;
+  text-align: center;
+  font-size: 2.5em;
+  overflow: hidden;
+  box-sizing: border-box;
+  padding-top: 5px;
+  color: white;
+  text-decoration: none;
+}
+
+.profile-overview {
+  width: 48%;
+  height: 350px;
+  background-color: #E1E8FF;
+  box-shadow: 3px 3px 3px #C4C4C4;
+  border-radius: 5px;
+  margin-right: 25px;
+}
+.profile-overview header {
+  background: #FFFFFF;
+  padding: 20px;
+  border-radius: 5px 5px 0 0;
+}
+.profile-overview header img {
+  width: 120px;
+  height: 120px;
+}
+.profile-overview header section.basic-info {
+  flex-grow: 1;
+  margin-left: 20px;
+}
+.profile-overview header section.basic-info h2 {
+  font-size: 2.5em;
+  color: #870FE5;
+  margin: 0 0 10px 0;
+}
+.profile-overview header section.basic-info p {
+  margin-bottom: 10px;
+}
+.profile-overview header section.basic-info span {
+  font-size: 1.714em;
+  font-weight: bold;
+}
+.profile-overview header section.basic-info span.job-position {
+  color: #6A6A6A;
+}
+.profile-overview header section.basic-info span.office-location {
+  color: #088815;
+}
+.profile-overview header section.basic-info span.employee-since {
+  color: #C1C1C1;
+}
+.profile-overview section.overview-details {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 20px;
+}
+.profile-overview section.overview-details span {
+  display: block;
+  font-size: 1.429em;
+  margin-bottom: 12px;
+}
+.profile-overview section.overview-details span.overview-heading {
+  width: 30%;
+  font-weight: bold;
+}
+.profile-overview section.overview-details span.overview-content {
+  width: 70%;
+}
+
+.main-content div.section-content.user-leave {
+  background: #d7d7d7;
+}
+
+.main-content .section-content.user-leave {
+  box-shadow: 3px 3px 3px rgba(255, 153, 60, 0.76);
+}
+
+.user-leave {
+  margin: 0;
+  position: relative;
+  width: 48%;
+  height: 350px;
+}
+.user-leave .new-leave {
+  position: absolute;
+  top: 3px;
+  right: 5px;
+  background-color: #208F32;
+  border: 2px solid white;
+}
+.user-leave header {
+  background: #FF993C;
+}
+.user-leave p {
+  font-size: 1.286em;
+  display: inline-block;
+  width: 70%;
+  margin: 0 0 20px 0;
+}
+.user-leave p span.paid-leave {
+  color: #038F01;
+}
+.user-leave p span.sick-leave {
+  color: #C61F1F;
+}
+.user-leave p span.special {
+  color: #6d0700;
+}
+.user-leave section.section-text.future-leaves, .user-leave section.section-text.past-leaves {
+  margin: 0;
+  padding: 20px;
+  height: 31%;
+  background-color: rgba(1, 1, 1, 0);
+}
+.user-leave section.section-text.future-leaves {
+  background-color: #fff;
+}
+.user-leave aside {
+  text-align: end;
+  display: inline-block;
+  width: 30%;
+}
+.user-leave aside a.action {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin-right: 12px;
+  background-color: grey;
+  border-radius: 20px;
+}
+.user-leave aside.sick-leave a.action.deny, .user-leave aside.special-leave a.action.deny {
+  display: none;
+}
+.user-leave aside.sick-leave a.action.approve, .user-leave aside.special-leave a.action.approve {
+  background-color: green;
+}
+.user-leave aside.paid-leave a.action.deny {
+  background-color: red;
+}
+.user-leave aside.paid-leave a.action.approve {
+  background-color: green;
+}
+.user-leave section.section-text.past-leaves a.action.approve {
+  background-color: rgba(18, 188, 14, 0.5);
+}
+.user-leave section.section-text.past-leaves a.action.deny {
+  background: rgba(255, 15, 0, 0.5);
+}
+
+.main-content .section-content.full-info {
+  box-shadow: 3px 3px 3px rgba(255, 116, 216, 0.76);
+}
+
+.full-info {
+  width: 95%;
+  position: relative;
+  padding-bottom: 10px;
+}
+.full-info .edit-profile {
+  position: absolute;
+  top: 3px;
+  right: 5px;
+  border: 2px solid white;
+  background-color: #208f32;
+}
+.full-info header {
+  background-color: #FF74D8;
+}
+.full-info .details-wrapper {
+  width: 58%;
+  margin-right: 25px;
+  background-color: rgba(255, 153, 0, 0.73);
+  border-radius: 5px;
+}
+.full-info .details-wrapper.flex-wrapper {
+  justify-content: space-between;
+}
+.full-info .details-wrapper .main-info {
+  width: 60%;
+  padding: 10px;
+  font-size: 1.43em;
+}
+.full-info .details-wrapper .main-info span {
+  margin-bottom: 7px;
+}
+.full-info .details-wrapper .main-info span.details-heading {
+  margin-left: 10px;
+  display: inline-block;
+  width: 40%;
+  font-weight: bold;
+}
+.full-info .details-wrapper .main-info span.details-info {
+  display: inline-block;
+  width: 40%;
+  font-weight: normal;
+}
+.full-info .details-wrapper .main-info h2 {
+  font-size: 2em;
+  font-weight: bold;
+  margin: 15px 5px;
+}
+.full-info .details-wrapper .history {
+  width: 30%;
+  padding: 10px;
+  background-color: #DBDBDB;
+  margin: 10px 10px 10px 20px;
+  box-sizing: border-box;
+}
+.full-info .details-wrapper .history h3 {
+  margin: 0;
+}
+.full-info .details-wrapper .notes {
+  width: 95%;
+  border: 1px solid black;
+  margin: 10px;
+  position: relative;
+}
+.full-info .details-wrapper .notes h4 {
+  margin: 5px;
+}
+.full-info .details-wrapper .notes .add-note {
+  position: absolute;
+  top: 3px;
+  right: 3px;
+  height: 20px;
+  widtH: 20px;
+  font-size: 1em;
+  vertical-align: sub;
+  background-color: #ffa012;
+  border: 1px solid white;
+  line-height: 1.3;
+  padding: 0;
+}
+.full-info .details-wrapper .notes span {
+  display: block;
+  margin-left: 10px;
+  font-size: 1.071em;
+}
+.full-info .others-wrapper {
+  width: 38%;
+}
+.full-info .others-wrapper div {
+  padding: 20px;
+  margin-bottom: 20px;
+}
+.full-info .others-wrapper div.personal {
+  background-color: #D0E0FF;
+}
+.full-info .others-wrapper div.extras {
+  background-color: #F2FFA0;
+}
+.full-info .others-wrapper div h2 {
+  font-size: 2em;
+  font-weight: bold;
+  margin: 0 0 10px;
+}
+.full-info .others-wrapper div span {
+  font-size: 1.429em;
+  display: inline-block;
+  margin-bottom: 5px;
+}
+.full-info .others-wrapper div span.others-heading {
+  width: 28%;
+  font-weight: bold;
+}
+.full-info .others-wrapper div span.others-text {
+  width: 70%;
+  font-weight: normal;
+}
+
+#add-note {
+  display: none;
+  position: fixed;
+  background-color: #ffb545;
+  bottom: 10%;
+  left: 20%;
+  z-index: 500;
+  border-radius: 3px;
+  padding: 10px;
+  box-shadow: 2px 2px 2px black;
+}
+#add-note h4 {
+  margin: 0 0 10px;
+}
+#add-note form textarea {
+  font-size: 1.1em;
+  display: block;
+  width: 300px;
+  height: 100px;
+  margin-bottom: 10px;
+}
+#add-note form button {
+  padding: 5px;
+  border-radius: 3px;
+}
+
+#leave-history {
+  display: none;
+  position: fixed;
+  top: 20%;
+  right: 20%;
+  width: 40%;
+  padding: 20px;
+  height: 600px;
+  z-index: 500;
+  border-radius: 5px;
+  background-color: #d7d7d7;
+  box-shadow: 3px 3px 3px black;
+}
+#leave-history section {
+  height: 90%;
+  overflow-y: auto;
+}
+#leave-history section p {
+  font-size: 1.286em;
+  display: inline-block;
+  width: 70%;
+  margin: 0 0 20px 0;
+}
+#leave-history section p span.paid-leave {
+  color: #038F01;
+}
+#leave-history section p span.sick-leave {
+  color: #C61F1F;
+}
+#leave-history section p span.special {
+  color: #6d0700;
+}
+
+/*# sourceMappingURL=profile.css.map */
