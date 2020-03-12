@@ -6,12 +6,11 @@ if (!empty($_GET['date'])) {
 }
 $title = 'Home Page - ' . $date->format('l jS F Y');
 $cssArray = ['main.css', 'home.css'];
-$jsArray = ['home.js'];
+$jsArray = ['main.js', 'home.js'];
 require_once 'header.php';
 ?>
 
-<div class="main-content">
-    <?php //overlay items ?>
+<?php //overlay items ?>
     <div id="birthdays-list">
         <h2>Birthdays today:</h2>
         <p><a href="#" class="profile"><i class="fas fa-user fa-missing"></i> John Smith [London, accounting] - 37</a></p>
@@ -20,7 +19,9 @@ require_once 'header.php';
         <p><a href="#" class="profile"><i class="fas fa-user fa-missing"></i> Sapun Paun [Cairo, HR] - 44</a></p>
         <p><a href="#" class="profile"><i class="fas fa-user fa-missing"></i> Tupan Velichkov [Plovdiv, design] - 34</a></p>
     </div>
-    <?php //end overlay items ?>
+<?php //end overlay items ?>
+
+<div class="main-content">
     <div class="flex-wrapper">
         <div class="section-content missing">
             <header>

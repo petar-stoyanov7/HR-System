@@ -271,7 +271,7 @@ body {
   top: 15%;
   left: 40%;
   width: 700px;
-  background-color: #e1e8ff;
+  background-color: #b8eaf9;
   box-shadow: 5px 5px 5px black;
   padding: 20px;
   border-radius: 5px;
@@ -281,17 +281,31 @@ body {
   }
 
   form {
+    .wrapper {
+      position: relative;
+
+      span.popup {
+        font-size: 0.9em;
+        position: absolute;
+        top: -8px;
+        right: 0px;
+        border-radius: 3px;
+        border: 2px solid red;
+        background-color: #fff;
+      }
+    }
+
     label, input, select {
       font-size: 1.1em;
       margin-bottom: 5px;
     }
     label {
       display: inline-block;
-      width: 15%;
+      width: 20%;
     }
     input,select {
       display: inline-block;
-      width: 80%;
+      width: 75%;
     }
     button[type="submit"] {
       padding: 5px;

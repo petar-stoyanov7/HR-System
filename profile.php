@@ -3,7 +3,7 @@ $user = new stdClass();
 $user->name = 'Petar Stoyanov';
 $title = 'Profile: '.$user->name;
 $cssArray = ['main.css', 'profile.css'];
-$jsArray = ['profile.js'];
+$jsArray = ['main.js', 'profile.js'];
 require_once 'header.php';
 ?>
 <?php //hidden elements ?>
@@ -138,11 +138,11 @@ require_once 'header.php';
             03.03.2020 - 10.03.2020
             <span class="special-leave">[special-leave]</span>
         </p>
-
     </section>
 </div>
-
 <?php //end hidden elements ?>
+
+
 <div class="main-content">
 <div class="flex-wrapper">
 

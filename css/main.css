@@ -234,7 +234,7 @@ body {
   top: 15%;
   left: 40%;
   width: 700px;
-  background-color: #e1e8ff;
+  background-color: #b8eaf9;
   box-shadow: 5px 5px 5px black;
   padding: 20px;
   border-radius: 5px;
@@ -242,17 +242,29 @@ body {
 #edit-user h2 {
   margin: 0 0 15px;
 }
+#edit-user form .wrapper {
+  position: relative;
+}
+#edit-user form .wrapper span.popup {
+  font-size: 0.9em;
+  position: absolute;
+  top: -8px;
+  right: 0px;
+  border-radius: 3px;
+  border: 2px solid red;
+  background-color: #fff;
+}
 #edit-user form label, #edit-user form input, #edit-user form select {
   font-size: 1.1em;
   margin-bottom: 5px;
 }
 #edit-user form label {
   display: inline-block;
-  width: 15%;
+  width: 20%;
 }
 #edit-user form input, #edit-user form select {
   display: inline-block;
-  width: 80%;
+  width: 75%;
 }
 #edit-user form button[type=submit] {
   padding: 5px;
