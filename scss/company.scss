@@ -1,4 +1,171 @@
 @import 'variables';
+
+#company-overlay {
+  display: none;
+  position: fixed;
+  z-index: $medium-z-index;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+#office-team-modal {
+  display: none;
+  position: fixed;
+  z-index: $medium-plus-z-index;
+  top: 15%;
+  left: 40%;
+  width: 25%;
+  padding: 20px;
+  border-radius: 3px;
+  background-color: #99afff;
+  box-shadow: 3px 3px 3px #505f89;
+
+  .team-members {
+    article {
+      &:hover {
+        background-color: #6b7dbc;
+      }
+      a {
+        text-decoration: none;
+        color: black;
+
+        &:hover {
+          background-color: #3c67ff;
+          color: #fff;
+        }
+      }
+
+      span {
+        font-size: 1.31em;
+        display: inline-block;
+
+        &.team-member {
+          width: 40%;
+        }
+
+        &.contact-details {
+          width: 55%;
+          text-align: right;
+        }
+      }
+    }
+  }
+
+}
+
+#office-details {
+  display: none;
+  position: fixed;
+  z-index: $low-plus-z-index;
+  top: 20%;
+  left: 25%;
+  width: 60%;
+  //height: 480px;
+  box-shadow: 3px 3px 3px black;
+
+  a {
+    text-decoration: none;
+    color: black;
+
+    &:hover {
+      background-color: #3c67ff;
+      color: white;
+    }
+  }
+  
+  header {
+    background-color: #3c67ff;
+  }
+
+  .flex-wrapper {
+    padding: 20px;
+    flex-direction: row;
+
+    .left-pane {
+      width: 40%;
+      padding: 10px;
+      margin-right: 20px;
+
+      iframe {
+        width: 90%;
+        height: 300px;
+        border: 0;
+      }
+
+      span {
+        font-size: 1.429em;
+        margin-bottom: 3px;
+        &.details-heading {
+          width: 20%;
+          font-weight: bold;
+        }
+        &.details-data {
+          width: 80%;
+          font-weight: normal;
+        }
+      }
+    }
+
+    .right-pane {
+      width: 54%;
+      padding: 10px;
+
+      .basic-info {
+        margin-bottom: 10px;
+        span {
+          font-size: 1.286em;
+          margin-bottom: 3px;
+          display: inline-block;
+
+          &.basic-heading {
+            width: 30%;
+            font-weight: bold;
+          }
+
+          &.basic-data {
+            width: 66%;
+          }
+        }
+      }
+
+      .teams {
+        overflow-y: auto;
+        max-height: 255px;
+
+        h3 {
+          margin: 0 0 10px;
+          font-size: 1.5em;
+          font-weight: bold;
+        }
+
+        .flex-wrapper {
+          padding: 5px;
+          article {
+            width: 45%;
+            background-color: #99AFFF;
+            padding: 5px;
+            margin-right: 10px;
+            margin-bottom: 10px;
+            border-radius: 3px;
+
+            h3,h4 {
+              margin: 0 0 3px;
+            }
+
+            p {
+              margin: 0 0 3px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+}
+
 #history-modal {
   display: none;
   position: fixed;
