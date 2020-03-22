@@ -1,0 +1,211 @@
+@import "variables";
+
+@import "variables";
+
+.leave-requests {
+  width: 45%;
+  height: 350px;
+  max-height: 350px;
+
+  header {
+    background-color: #b556ff;
+  }
+
+  .text-applications {
+    max-height: 210px;
+    font-size: 1.15em;
+    
+    .leave-application {
+      margin-bottom: 5px;
+      
+      &:hover {
+        background-color: #d4d4d4;
+      }
+      .application-person {
+        width: 80%;
+        
+        .application-type {
+          &.paid{
+            color: #259309;
+          }
+          &.special {
+            color: #620206;
+          }
+          &.non-paid {
+            color: #595959;
+          }
+        }
+
+        a .fas.fa-user.fa-missing {
+          font-size: 1.22em;
+          text-decoration: none;
+          color: black;
+        }
+      }
+
+      .application-tools {
+        width: 15%;
+        text-align: right;
+
+        a {
+          display: inline-block;
+          width: 1em;
+          height: 1em;
+          border-radius: 50%;
+          margin-left: 10px;
+
+          &.approve {
+            background-color: green;
+          }
+
+          &.deny {
+            background-color: red;
+          }
+        }
+      }
+    }
+  }
+}
+
+.message-requests {
+  width: 45%;
+  height: 350px;
+  position: relative;
+
+  .new-message-link {
+    position: absolute;
+    top: 3px;
+    right: 3px;
+    background-color: #208f32;
+    border: 1px solid white;
+    width: 35px;
+    height: 35px;
+    line-height: 25px;
+  }
+
+  header {
+    background-color: #ff993b;
+  }
+
+  .pending-messages {
+    max-height: 210px;
+
+    article {
+      margin-bottom: 10px;
+      font-size: 1.2em;
+      width: 96%;
+      background-color: #c4c6c5;
+      padding: 10px;
+      border-radius: 5px;
+      position: relative;
+
+      .message-info {
+        position: absolute;
+        top: 2px;
+        left: 2px;
+        font-size: 0.8em;
+      }
+
+      .message-content {
+        width: 80%;
+        margin-top: 10px;
+      }
+
+      .message-tools {
+        width: 15%;
+        text-align: right;
+        margin-top: 10px;
+
+        a {
+          display: inline-block;
+          width: 1em;
+          height: 1em;
+          margin-left: 10px;
+          margin-top: 10px;
+          border-radius: 50%;
+          border: 1px solid white;
+
+          &.approve {
+            background-color: green;
+          }
+          &.deny {
+            background-color: red;
+          }
+        }
+      }
+
+      &.normal-broadcast {
+        background-color: #56d0aa;
+      }
+      &.warning {
+        background-color: #ffec07;
+      }
+      &.important {
+        background-color: #ff7d1a;
+      }
+      &.danger {
+        background-color: #c82f25;
+      }
+    }
+  }
+}
+
+.news {
+  width: 97%;
+  height: 700px;
+  header {
+    background-color: #FF74D8;
+  }
+
+  .text-today {
+    margin: 20px;
+    max-height: 600px;
+
+    article {
+      font-size: 1.214em;
+      background-color: #f1f1f1;
+      padding: 15px;
+      margin-bottom: 20px;
+
+      &.management {
+        background-color: #ff3131;
+        color: white;
+      }
+
+      &.broadcast {
+        background-color: #faff00;
+      }
+
+      span.title {
+        font-weight: bold;
+      }
+    }
+  }
+}
+
+#birthdays-list {
+  z-index: $medium-z-index;
+  display: none;
+  position: fixed;
+  left: 50%;
+  top: 20%;
+  padding: 20px;
+  background-color: #faff00;
+  font-size: 1.429em;
+  border-radius: 5px;
+  box-shadow: 4px 4px 3px grey;
+
+  h2 {
+    margin: 5px 10px;
+  }
+
+  a {
+    text-decoration: none;
+    color: black;
+
+    &:hover {
+      background-color: #FF993C;
+    }
+  }
+}
+

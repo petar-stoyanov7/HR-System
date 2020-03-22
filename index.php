@@ -9,18 +9,6 @@ $cssArray = ['main.css', 'home.css'];
 $jsArray = ['main.js', 'home.js'];
 require_once 'header.php';
 ?>
-
-<?php //overlay items ?>
-    <div id="birthdays-list">
-        <h2>Birthdays today:</h2>
-        <p><a href="#" class="profile"><i class="fas fa-user fa-missing"></i> John Smith [London, accounting] - 37</a></p>
-        <p><a href="#" class="profile"><i class="fas fa-user fa-missing"></i> Penka Prychkova [Plovdiv, HR] - ##</a></p>
-        <p><a href="#" class="profile"><i class="fas fa-user fa-missing"></i> Abdul Masur [Cairo, development] - 32</a></p>
-        <p><a href="#" class="profile"><i class="fas fa-user fa-missing"></i> Sapun Paun [Cairo, HR] - 44</a></p>
-        <p><a href="#" class="profile"><i class="fas fa-user fa-missing"></i> Tupan Velichkov [Plovdiv, design] - 34</a></p>
-    </div>
-<?php //end overlay items ?>
-
 <div class="main-content">
     <div class="flex-wrapper">
         <div class="section-content missing">
@@ -109,6 +97,18 @@ require_once 'header.php';
         </section>
     </div>
 </div>
+
+
+<?php //overlay items ?>
+    <div id="birthdays-list" class="switchable-modal">
+        <h2>Birthdays today:</h2>
+        <p><a href="#" class="profile"><i class="fas fa-user fa-missing"></i> John Smith [London, accounting] - 37</a></p>
+        <p><a href="#" class="profile"><i class="fas fa-user fa-missing"></i> Penka Prychkova [Plovdiv, HR] - ##</a></p>
+        <p><a href="#" class="profile"><i class="fas fa-user fa-missing"></i> Abdul Masur [Cairo, development] - 32</a></p>
+        <p><a href="#" class="profile"><i class="fas fa-user fa-missing"></i> Sapun Paun [Cairo, HR] - 44</a></p>
+        <p><a href="#" class="profile"><i class="fas fa-user fa-missing"></i> Tupan Velichkov [Plovdiv, design] - 34</a></p>
+    </div>
+<?php //end overlay items ?>
 
 <?php
 require_once 'footer.php';

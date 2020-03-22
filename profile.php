@@ -6,143 +6,6 @@ $cssArray = ['main.css', 'profile.css'];
 $jsArray = ['main.js', 'profile.js'];
 require_once 'header.php';
 ?>
-<?php //hidden elements ?>
-<div id="add-note">
-    <h4>Add a note:</h4>
-    <form method="post" action="#">
-        <textarea name="note-text" id="note-text" placeholder="Add a note about the user"></textarea>
-        <button type="submit">Add</button>
-    </form>
-</div>
-
-<div id="leave-history">
-    <h3>Leave history</h3>
-    <section>
-        <p>
-            03.03.2020 - 10.03.2020
-            <span class="sick-leave">[sick-leave]</span>
-        </p>
-        <p>
-            03.03.2020 - 10.03.2020
-            <span class="paid-leave">[paid-leave]</span>
-        </p>
-        <p>
-            03.03.2020 - 10.03.2020
-            <span class="special-leave">[special-leave]</span>
-        </p>
-        <p>
-            03.03.2020 - 10.03.2020
-            <span class="sick-leave">[sick-leave]</span>
-        </p>
-        <p>
-            03.03.2020 - 10.03.2020
-            <span class="paid-leave">[paid-leave]</span>
-        </p>
-        <p>
-            03.03.2020 - 10.03.2020
-            <span class="special-leave">[special-leave]</span>
-        </p>
-        <p>
-            03.03.2020 - 10.03.2020
-            <span class="sick-leave">[sick-leave]</span>
-        </p>
-        <p>
-            03.03.2020 - 10.03.2020
-            <span class="paid-leave">[paid-leave]</span>
-        </p>
-        <p>
-            03.03.2020 - 10.03.2020
-            <span class="special-leave">[special-leave]</span>
-        </p>
-        <p>
-            03.03.2020 - 10.03.2020
-            <span class="sick-leave">[sick-leave]</span>
-        </p>
-        <p>
-            03.03.2020 - 10.03.2020
-            <span class="paid-leave">[paid-leave]</span>
-        </p>
-        <p>
-            03.03.2020 - 10.03.2020
-            <span class="special-leave">[special-leave]</span>
-        </p>
-        <p>
-            03.03.2020 - 10.03.2020
-            <span class="sick-leave">[sick-leave]</span>
-        </p>
-        <p>
-            03.03.2020 - 10.03.2020
-            <span class="paid-leave">[paid-leave]</span>
-        </p>
-        <p>
-            03.03.2020 - 10.03.2020
-            <span class="special-leave">[special-leave]</span>
-        </p>
-        <p>
-            03.03.2020 - 10.03.2020
-            <span class="sick-leave">[sick-leave]</span>
-        </p>
-        <p>
-            03.03.2020 - 10.03.2020
-            <span class="paid-leave">[paid-leave]</span>
-        </p>
-        <p>
-            03.03.2020 - 10.03.2020
-            <span class="special-leave">[special-leave]</span>
-        </p>
-        <p>
-            03.03.2020 - 10.03.2020
-            <span class="sick-leave">[sick-leave]</span>
-        </p>
-        <p>
-            03.03.2020 - 10.03.2020
-            <span class="paid-leave">[paid-leave]</span>
-        </p>
-        <p>
-            03.03.2020 - 10.03.2020
-            <span class="special-leave">[special-leave]</span>
-        </p>
-        <p>
-            03.03.2020 - 10.03.2020
-            <span class="sick-leave">[sick-leave]</span>
-        </p>
-        <p>
-            03.03.2020 - 10.03.2020
-            <span class="paid-leave">[paid-leave]</span>
-        </p>
-        <p>
-            03.03.2020 - 10.03.2020
-            <span class="special-leave">[special-leave]</span>
-        </p>
-        <p>
-            03.03.2020 - 10.03.2020
-            <span class="sick-leave">[sick-leave]</span>
-        </p>
-        <p>
-            03.03.2020 - 10.03.2020
-            <span class="paid-leave">[paid-leave]</span>
-        </p>
-        <p>
-            03.03.2020 - 10.03.2020
-            <span class="special-leave">[special-leave]</span>
-        </p>
-        <p>
-            03.03.2020 - 10.03.2020
-            <span class="sick-leave">[sick-leave]</span>
-        </p>
-        <p>
-            03.03.2020 - 10.03.2020
-            <span class="paid-leave">[paid-leave]</span>
-        </p>
-        <p>
-            03.03.2020 - 10.03.2020
-            <span class="special-leave">[special-leave]</span>
-        </p>
-    </section>
-</div>
-<?php //end hidden elements ?>
-
-
 <div class="main-content">
 <div class="flex-wrapper">
 
@@ -177,7 +40,7 @@ require_once 'header.php';
     </div>
 
     <div class="section-content user-leave">
-        <a href="#" id="new-leave-button" class="edit-button new-leave">+</a>
+        <a href="#" class="edit-button new-leave new-leave-link">+</a>
         <header>
             <h3 class="section-title">User leaves</h3>
         </header>
@@ -307,5 +170,140 @@ require_once 'header.php';
     </div>
 </div>
 
+<?php //hidden elements ?>
+<div id="add-note" class="switchable-modal">
+    <h4>Add a note:</h4>
+    <form method="post" action="#">
+        <textarea name="note-text" id="note-text" placeholder="Add a note about the user"></textarea>
+        <button type="submit">Add</button>
+    </form>
+</div>
+
+<div id="leave-history" class="switchable-modal">
+    <h3>Leave history</h3>
+    <section>
+        <p>
+            03.03.2020 - 10.03.2020
+            <span class="sick-leave">[sick-leave]</span>
+        </p>
+        <p>
+            03.03.2020 - 10.03.2020
+            <span class="paid-leave">[paid-leave]</span>
+        </p>
+        <p>
+            03.03.2020 - 10.03.2020
+            <span class="special-leave">[special-leave]</span>
+        </p>
+        <p>
+            03.03.2020 - 10.03.2020
+            <span class="sick-leave">[sick-leave]</span>
+        </p>
+        <p>
+            03.03.2020 - 10.03.2020
+            <span class="paid-leave">[paid-leave]</span>
+        </p>
+        <p>
+            03.03.2020 - 10.03.2020
+            <span class="special-leave">[special-leave]</span>
+        </p>
+        <p>
+            03.03.2020 - 10.03.2020
+            <span class="sick-leave">[sick-leave]</span>
+        </p>
+        <p>
+            03.03.2020 - 10.03.2020
+            <span class="paid-leave">[paid-leave]</span>
+        </p>
+        <p>
+            03.03.2020 - 10.03.2020
+            <span class="special-leave">[special-leave]</span>
+        </p>
+        <p>
+            03.03.2020 - 10.03.2020
+            <span class="sick-leave">[sick-leave]</span>
+        </p>
+        <p>
+            03.03.2020 - 10.03.2020
+            <span class="paid-leave">[paid-leave]</span>
+        </p>
+        <p>
+            03.03.2020 - 10.03.2020
+            <span class="special-leave">[special-leave]</span>
+        </p>
+        <p>
+            03.03.2020 - 10.03.2020
+            <span class="sick-leave">[sick-leave]</span>
+        </p>
+        <p>
+            03.03.2020 - 10.03.2020
+            <span class="paid-leave">[paid-leave]</span>
+        </p>
+        <p>
+            03.03.2020 - 10.03.2020
+            <span class="special-leave">[special-leave]</span>
+        </p>
+        <p>
+            03.03.2020 - 10.03.2020
+            <span class="sick-leave">[sick-leave]</span>
+        </p>
+        <p>
+            03.03.2020 - 10.03.2020
+            <span class="paid-leave">[paid-leave]</span>
+        </p>
+        <p>
+            03.03.2020 - 10.03.2020
+            <span class="special-leave">[special-leave]</span>
+        </p>
+        <p>
+            03.03.2020 - 10.03.2020
+            <span class="sick-leave">[sick-leave]</span>
+        </p>
+        <p>
+            03.03.2020 - 10.03.2020
+            <span class="paid-leave">[paid-leave]</span>
+        </p>
+        <p>
+            03.03.2020 - 10.03.2020
+            <span class="special-leave">[special-leave]</span>
+        </p>
+        <p>
+            03.03.2020 - 10.03.2020
+            <span class="sick-leave">[sick-leave]</span>
+        </p>
+        <p>
+            03.03.2020 - 10.03.2020
+            <span class="paid-leave">[paid-leave]</span>
+        </p>
+        <p>
+            03.03.2020 - 10.03.2020
+            <span class="special-leave">[special-leave]</span>
+        </p>
+        <p>
+            03.03.2020 - 10.03.2020
+            <span class="sick-leave">[sick-leave]</span>
+        </p>
+        <p>
+            03.03.2020 - 10.03.2020
+            <span class="paid-leave">[paid-leave]</span>
+        </p>
+        <p>
+            03.03.2020 - 10.03.2020
+            <span class="special-leave">[special-leave]</span>
+        </p>
+        <p>
+            03.03.2020 - 10.03.2020
+            <span class="sick-leave">[sick-leave]</span>
+        </p>
+        <p>
+            03.03.2020 - 10.03.2020
+            <span class="paid-leave">[paid-leave]</span>
+        </p>
+        <p>
+            03.03.2020 - 10.03.2020
+            <span class="special-leave">[special-leave]</span>
+        </p>
+    </section>
+</div>
+<?php //end hidden elements ?>
 
 <?php require_once 'footer.php'; ?>

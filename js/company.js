@@ -13,8 +13,8 @@ $(document).ready(function(){
 
     blackOverlay.click(function(){
         blackOverlay.hide();
-        historyModal.hide();
         officeModal.hide();
+        $('.switchable-modal').hide();
     });
 
     companyOverlay.click(function(){
@@ -30,5 +30,13 @@ $(document).ready(function(){
     $('article.team').click(function(){
         companyOverlay.toggle();
         officeTeamModal.toggle();
+    });
+
+    $('#search-employees').on('input', function(){
+        searchContents(
+            $(this),
+            'article.team-member',
+            'article.team-member'
+        )
     });
 });

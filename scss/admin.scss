@@ -1,0 +1,197 @@
+@import 'variables';
+
+button.new-entry {
+  margin-top: 10px;
+  padding: 5px;
+  background-color: #2ec348;
+  width: 9%;
+  font-size: 1.1em;
+  border: 2px outset #757986;
+}
+
+form {
+  input, label, select, textarea {
+    height: 25px;
+    line-height: 25px;
+    font-size: 1.1em;
+    font-weight: normal;
+    margin-bottom: 5px;
+    margin-right: 5px;
+    padding: 1px;
+  }
+
+  input,select,textarea {
+    border: 1px groove #757782;
+    border-radius: 2px;
+  }
+
+  .form-wrapper {
+    display: flex;
+
+    label {
+      width: 30%;
+    }
+
+    input, select {
+      width: 65%;
+    }
+  }
+
+  button {
+    padding: 5px;
+    background-color: #e1e8ff;
+    width: 9%;
+    font-size: 1.1em;
+    border: 2px outset #757986;
+
+    &:hover {
+      background-color: #555a74;
+      border: 2px outset #5b5f6a;
+      color: white;
+    }
+    &.new {
+      background-color: #9aff8f;
+      &:hover {
+        background-color: #498039;
+      }
+    }
+    &.delete {
+      background-color: #ff7e5b;
+      &:hover {
+        background-color: #b83c31;
+      }
+    }
+  }
+
+  fieldset {
+    margin-right: 20px;
+    margin-bottom: 20px;
+  }
+}
+
+.admin-panel-section {
+  width: 98%;
+  margin-bottom: 20px;
+  padding: 10px;
+  background-color: #e1e8ff;
+  border: 2px solid #9091a9;
+
+  h3 {
+    margin: 0 0 20px;
+  }
+}
+
+#company {
+  textarea {
+    width: 99%;
+    height: 99%;
+    resize: none;
+  }
+}
+
+#offices {
+  form {
+    margin-right: 10px;
+    margin-bottom: 10px;
+    position: relative;
+    font-size: 0.9em;
+    padding: 10px;
+    background-color: #ced5eb;
+    box-shadow: 3px 3px 3px #555865;
+
+    button {
+      width: auto;
+    }
+  }
+}
+
+#teams {
+  form {
+    margin-right: 20px;
+    margin-bottom: 20px;
+  }
+
+  #teams-container{
+    margin-bottom: 20px;
+  }
+
+  #new-team {
+    display: none;
+  }
+}
+
+form.team-edit {
+  padding: 10px;
+  background-color: #ced5eb;
+  border-radius: 2px;
+
+  textarea {
+    width: 99%;
+    height: 6em;
+  }
+
+  button {
+    width: auto;
+  }
+}
+
+#employees {
+  label,input,select {
+    margin-right: 5px;
+    height: 20px;
+    line-height: 20px;
+  }
+  select.job-position {
+    display: none;
+  }
+  table {
+    width: 99%;
+    text-align: center;
+    
+    tr:hover {
+      background-color: #c8cee4;
+    }
+  }
+}
+
+#new-team-form {
+  display: none;
+  position: fixed;
+  z-index: $medium-z-index;
+  width: 20%;
+  top: 70%;
+  left: 45%;
+  padding: 20px;
+  background-color: #e1e8ff;
+  box-shadow: 3px 3px 3px black;
+
+  h3 {
+    margin: 0 0 10px 10px;
+  }
+
+  .office-placeholder {
+    text-transform: capitalize;
+  }
+}
+
+#new-office-form {
+  display: none;
+  position: fixed;
+  z-index: $medium-z-index;
+  width: 20%;
+  top: 40%;
+  left: 30%;
+  padding: 20px;
+  background-color: #e1e8ff;
+  box-shadow: 3px 3px 3px black;
+
+  h3 {
+    margin: 0 0 10px 10px;
+  }
+
+  form {
+    button {
+      width: auto;
+    }
+  }
+}

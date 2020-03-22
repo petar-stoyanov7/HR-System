@@ -17,6 +17,7 @@
     <?php endif; ?>
     <?php /* calendar tutorial: https://www.cssscript.com/calendar-generator-base/ */ ?>
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <link rel="shortcut icon" href="/img/static/favicon.png" type="image/x-icon">
 
     <script src="./js/calendar.js"></script>
     <title><?= $title; ?></title>
@@ -49,17 +50,24 @@
 <?php require_once 'hidden-fields.php'; ?>
 <div class="site-content">
     <aside class="main-navbar">
-        <ul>
+        <ul class="main-navbar">
             <li>
-                <a href="/">Admin</a>
+                <a href="admin.php">Admin</a>
                 <ul class="submenu">
-                    <li><a href="">Company</a></li>
-                    <li><a href="">Teams</a></li>
-                    <li><a href="">Employees</a></li>
+                    <li><a href="admin.php#company">Company</a></li>
+                    <li><a href="admin.php#offices">Offices</a></li>
+                    <li><a href="admin.php#teams">Teams</a></li>
+                    <li><a href="admin.php#employees">Employees</a></li>
                 </ul>
             </li>
             <li><a href="/">Home</a></li>
-            <li><a href="communication.php">Communication</a></li>
+            <li>
+                <a href="communications.php">Communication</a>
+                <ul class="submenu">
+                    <li><a href="#" class="new-message-link">(+) New message</a></li>
+                </ul>
+            </li>
             <li><a href="company.php">Company</a></li>
+            <li><a href="#" class="new-leave-link">New leave</a></li>
         </ul>
     </aside>

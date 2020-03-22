@@ -1,4 +1,4 @@
-<div id="calendar">
+<div id="calendar" class="switchable-modal">
     <header>
         <a href="#" id="month-backwards"><i class="fas fa-chevron-left"></i></a>
         <span id="selected-month"></span>
@@ -9,10 +9,79 @@
     </div>
 </div>
 
-<div id="edit-user">
+<div id="new-message" class="switchable-modal">
+    <h3>New broadcast request:</h3>
+    <form id="new-message-form" class="flex-wrapper">
+        <div class="element-wrapper">
+            <label for="type">Type</label>
+            <select id="type" name="type">
+                <option value="normal-broadcast">Normal broadcast</option>
+                <option value="warning">Warning</option>
+                <option value="important">Important</option>
+                <option value="danger">Danger</option>
+            </select>
+        </div>
+        <div class="element-wrapper">
+            <label for="office">Office:</label>
+            <select id="office" name="office">
+                <option value="plovdiv">Plovdiv</option>
+                <option value="london">London</option>
+                <option value="cairo">Cairo</option>
+                <option value="corrusant">Corrusant</option>
+                <option value="all" selected>All</option>
+            </select>
+        </div>
+        <div class="element-wrapper">
+            <div class="rooms-wrapper" id="wrapper-plovdiv">
+                <label for="rooms-plovdiv">Room:</label>
+                <select name="rooms-plovdiv" id="rooms-plovdiv">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                </select>
+            </div>
+            <div class="rooms-wrapper" id="wrapper-london">
+                <label for="rooms-london">Room:</label>
+                <select name="rooms-london" id="rooms-london">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
+            </div>
+            <div class="rooms-wrapper" id="wrapper-cairo">
+                <label for="rooms-cairo">Room:</label>
+                <select name="rooms-cairo" id="rooms-cairo">
+                    <option value="101">101</option>
+                    <option value="102">102</option>
+                    <option value="103">103</option>
+                    <option value="104">104</option>
+                </select>
+            </div>
+            <div class="rooms-wrapper" id="wrapper-corrusant">
+                <label for="rooms-corrusant">Room:</label>
+                <select name="rooms-corrusant" id="rooms-corrusant">
+                    <option value="A1001">A1001</option>
+                    <option value="A1002">A1002</option>
+                    <option value="A1003">A1003</option>
+                    <option value="A1004">A1004</option>
+                    <option value="A1005">A1005</option>
+                    <option value="A1006">A1006</option>
+                    <option value="A1007">A1007</option>
+                    <option value="A1008">A1008</option>
+                </select>
+            </div>
+        </div>
+        <textarea id="text-message" name="text-message" placeholder="type your message"></textarea>
+        <button type="submit">Send</button>
+    </form>
+</div>
+
+<div id="edit-user" class="switchable-modal">
     <h2>Edit User:</h2>
     <form method="post" id="edit-user-form" action="#">
-        <fieldset class="basic-info flex-wrapper">
+        <fieldset class="basic-info">
             <legend>Basic info</legend>
             <div class="wrapper">
                 <label for="name">Name:</label>
@@ -36,6 +105,7 @@
                     <option value="plovdiv" selected>plovdiv</option>
                     <option value="london">london</option>
                     <option value="cairo">Cairo</option>
+                    <option value="corrusant">Corrusant</option>
                 </select>
             </div>
             <div class="wrapper">
@@ -57,7 +127,7 @@
                 <input type="text" name="salary" id="salary" value="1300 BGN">
             </div>
         </fieldset>
-        <fieldset class="personal flex-wrapper">
+        <fieldset class="personal">
             <legend>Personal</legend>
             <div class="wrapper">
                 <label for="marial-status">Marial status:</label>
@@ -82,7 +152,7 @@
                 <input type="text" name="relative-phone" id="relative-phone" value="+359888777666">
             </div>
         </fieldset>
-        <fieldset class="extras flex-wrapper">
+        <fieldset class="extras">
             <legend>Extras</legend>
             <div class="wrapper">
                 <label for="hobbies">Hobbies:</label>
@@ -109,7 +179,7 @@
     </form>
 </div>
 
-<div id="new-leave">
+<div id="new-leave" class="switchable-modal">
     <h4>New leave application</h4>
     <form>
         <label for="type">Type:</label>
