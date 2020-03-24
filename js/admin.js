@@ -130,6 +130,42 @@ $(function(){
         searchEmployees(searchString, 'positionHidden', 'employee-position')
     });
 
+    // $('td button.edit').click(function(){
+    //     editUserForm.toggle();
+    //     blackOverlay.toggle();
+    // });
+    //
+    // $('td button.delete').click(function(){
+    //     if (confirm('Are you sure you want to delete employee ' + name + '?')) {
+    //         parentRow.hide();
+    //     }
+    // });
+
+    $('td.employee-actions button').click(function(){
+        var parentRow = $(this).closest('tr');
+        var name = parentRow.find('td.employee-name').text();
+        if ($(this).hasClass('delete')) {
+            if (confirm('Are you sure you want to delete employee ' + name + '?')) {
+                parentRow.hide();
+            }
+        } else if ($(this).hasClass('edit')) {
+            var email = parentRow.find('td.employee-email').text();
+            var office = parentRow.find('td.employee-office').text().toLowerCase();
+            var team = parentRow.find('td.employee-team').text();
+            var jobPosition = parentRow.find('td.employee-position');
+            editUserForm.find('input').val('');
+            editUserForm.find('select').val('');
+            editUserForm.find('input#name').val(name);
+            editUserForm.find('input#email').val(email);
+            editUserForm.find('select#office').val(office);
+            editUserForm.find('select#team').val(team);
+            editUserForm.find('select#position').val(jobPosition);
+
+            editUserForm.toggle();
+            blackOverlay.toggle();
+        }
+    });
+
 
 
 });

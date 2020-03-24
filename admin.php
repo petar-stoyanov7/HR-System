@@ -302,12 +302,16 @@ require_once 'header.php';
         <table id="employees-table">
             <tr>
                 <th>Name</th>
+                <th>e-mail:</th>
                 <th>Office</th>
                 <th>Team</th>
                 <th>Position</th>
                 <th>Actions</th>
             </tr>
             <tr>
+                <td>
+                    <input type="text" id="employees-search" placeholder="search">
+                </td>
                 <td>
                     <input type="text" id="employees-search" placeholder="search">
                 </td>
@@ -330,7 +334,7 @@ require_once 'header.php';
                 <td>
                     <?php foreach($subTeams as $index => $team) : ?>
                         <select class="job-position" id="<?= $index ?>">
-                            <option>--select position --</option>
+                            <option value="">--select position --</option>
                             <?php foreach($team as $position) : ?>
                                 <option value="<?= $position; ?>"><?= $position ?></option>
                             <?php endforeach; ?>
@@ -341,6 +345,7 @@ require_once 'header.php';
             <?php for ($i = 0; $i < 421; $i++) : ?>
             <tr>
                 <td class="employee-name">Team Member #<?= $i; ?></td>
+                <td class="employee-email">team.m<?=$i;?>@mycompany.net</td>
                 <td class="employee-office"><?= $offices[rand(0, count($offices) - 1)]; ?></td>
                 <?php
                 $teamIndex = rand(0, count($teams) -1);
@@ -348,7 +353,7 @@ require_once 'header.php';
                 ?>
                 <td class="employee-team"><?= $teams[$teamIndex]; ?></td>
                 <td class="employee-position"><?= $subTeams[$team][rand(0, count($subTeams[$team]) - 1)]?></td>
-                <td>
+                <td class="employee-actions">
                     <button type="button" class="edit">e</button>
                     <button type="button" class="delete">x</button>
                 </td>

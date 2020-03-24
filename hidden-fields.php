@@ -102,8 +102,8 @@
             <div class="wrapper">
                 <label for="office">Office:</label>
                 <select name="office" id="office">
-                    <option value="plovdiv" selected>plovdiv</option>
-                    <option value="london">london</option>
+                    <option value="plovdiv" selected>Plovdiv</option>
+                    <option value="london">London</option>
                     <option value="cairo">Cairo</option>
                     <option value="corrusant">Corrusant</option>
                 </select>
@@ -116,6 +116,15 @@
                     <option value="development" selected>development</option>
                     <option value="design">design</option>
                     <option value="support">support</option>
+                </select>
+            </div>
+            <div class="wrapper">
+                <label for="position">Position:</label>
+                <select name="position" id="position">
+                    <option value="junior dev">junior dev</option>
+                    <option value="developer">developer</option>
+                    <option value="development GL">development GL</option>
+                    <option value="development TL">development TL</option>
                 </select>
             </div>
             <div class="wrapper">
