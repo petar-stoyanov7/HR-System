@@ -198,7 +198,7 @@
             <option value="special-leave">Special Leave</option>
             <option value="nonpaid-leave">Non paid leave</option>
         </select>
-        <textarea id="asd" name="asd" placeholder="Brief description"></textarea>
+        <textarea id="description" name="description" placeholder="Brief description"></textarea>
         <button type="submit">Submit</button>
     </form>
 </div>

@@ -35,7 +35,7 @@ var searchEmployees = function(search, hiddenClass, cellClass) {
 var generateOfficeData = function(office) {
     var data;
     $.ajax({
-        url: 'admin.php',
+        url: 'ajax.php',
         type: JSON,
         method: 'post',
         data: {
@@ -103,13 +103,24 @@ $(function(){
     $('#company-offices').change(function(){
         $('#teams-container').html('');
         var office = $(this).val();
-        generateOfficeData(office);
-        $('#new-team').toggle().attr('office-name', office);
+        console.log(office);
+        if (office === '-') {
+            $('#teams-container').html('');
+            $('#new-team').hide();
+        } else {
+            generateOfficeData(office);
+            $('#new-team').show().attr('office-name', office);
+        }
     });
 
-    $('#employees-search').on('input', function(){
+    $('#employees-name-search').on('input', function(){
         var searchString = $(this).val();
         searchEmployees(searchString, 'nameHidden', 'employee-name');
+    });
+
+    $('#employees-email-search').on('input', function(){
+        var searchString = $(this).val();
+        searchEmployees(searchString, 'emailHidden', 'employee-email');
     });
 
     $('#employee-office').change(function(){
@@ -121,7 +132,6 @@ $(function(){
         var searchString = $(this).val();
         $('select.job-position').hide();
         $('select#' + searchString).show();
-
         searchEmployees(searchString, 'teamHidden', 'employee-team');
     });
 
@@ -129,17 +139,6 @@ $(function(){
         var searchString = $(this).val();
         searchEmployees(searchString, 'positionHidden', 'employee-position')
     });
-
-    // $('td button.edit').click(function(){
-    //     editUserForm.toggle();
-    //     blackOverlay.toggle();
-    // });
-    //
-    // $('td button.delete').click(function(){
-    //     if (confirm('Are you sure you want to delete employee ' + name + '?')) {
-    //         parentRow.hide();
-    //     }
-    // });
 
     $('td.employee-actions button').click(function(){
         var parentRow = $(this).closest('tr');

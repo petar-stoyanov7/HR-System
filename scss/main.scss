@@ -381,11 +381,13 @@ body {
   position: fixed;
   background-color: rgb(86, 208, 170);
   top: 30%;
-  right: 20%;
+  right: 30%;
   z-index: $medium-z-index;
   border-radius: 3px;
   padding: 10px;
   box-shadow: 2px 2px 2px black;
+  width: 30%;
+  height: 30%;
 
   h4 {
     margin: 0 0 10px;
@@ -393,11 +395,14 @@ body {
 
   form {
     justify-content: space-between;
+    width: 97%;
+    height: 97%;
     textarea {
+      resize: none;
       font-size: 1.1em;
       display: block;
-      width: 300px;
-      height: 100px;
+      width: 97%;
+      height: 60%;
       margin-bottom: 10px
     }
 
