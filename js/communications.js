@@ -2,7 +2,6 @@ var approveApplication = function(target, isLeave) {
     if (undefined === isLeave || isLeave) {
         var applicationContainer = $(target).closest('div.leave-application');
     } else if (!isLeave) {
-        console.log(target);
         var applicationContainer = $(target).closest('article.pending-broadcast');
     }
 

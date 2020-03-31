@@ -14,7 +14,7 @@
     <form id="new-message-form" class="flex-wrapper">
         <div class="element-wrapper">
             <label for="type">Type</label>
-            <select id="type" name="type">
+            <select id="message-type" name="type">
                 <option value="normal-broadcast">Normal broadcast</option>
                 <option value="warning">Warning</option>
                 <option value="important">Important</option>

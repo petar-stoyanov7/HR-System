@@ -32,9 +32,13 @@ form {
       width: 30%;
     }
 
-    input, select {
+    input {
       width: 65%;
     }
+    select {
+      width: 66%;
+    }
+
   }
 
   button {
@@ -84,7 +88,7 @@ form {
 #company {
   textarea {
     width: 99%;
-    height: 99%;
+    height: 83%;
     resize: none;
   }
 }
@@ -98,6 +102,19 @@ form {
     padding: 10px;
     background-color: #ced5eb;
     box-shadow: 3px 3px 3px #555865;
+
+    .form-wrapper {
+      label {
+        width: 40%;
+      }
+      input {
+        width: 55%;
+      }
+      select {
+        width: 56%;
+      }
+    }
+
 
     button {
       width: auto;
@@ -136,6 +153,7 @@ form.team-edit {
 }
 
 #employees {
+  min-height: 500px;
   label,input,select {
     margin-right: 5px;
     height: 20px;

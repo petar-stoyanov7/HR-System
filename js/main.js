@@ -67,4 +67,23 @@ $(document).ready(function(){
     });
 
     $('#black-overlay').click(hideAllModals);
+
+
+    $('#message-type').change(function(){
+        var modalWindow = $('div#new-message');
+        switch($(this).val()) {
+            case 'danger':
+                modalWindow.css('background-color', '#c82f25');
+                break;
+            case 'warning':
+                modalWindow.css('background-color', '#ffec07');
+                break;
+            case 'important':
+                modalWindow.css('background-color', '#ff7d1a');
+                break;
+            default:
+                modalWindow.css('background-color', '#56d0aa');
+                break;
+        }
+    });
 });

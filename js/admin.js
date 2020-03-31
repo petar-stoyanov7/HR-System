@@ -42,7 +42,6 @@ var generateOfficeData = function(office) {
             'office-name': office
         },
         success: function(response) {
-            console.log(response);
             data = JSON.parse(response);
         }
     }).done(function(){
@@ -103,7 +102,6 @@ $(function(){
     $('#company-offices').change(function(){
         $('#teams-container').html('');
         var office = $(this).val();
-        console.log(office);
         if (office === '-') {
             $('#teams-container').html('');
             $('#new-team').hide();
@@ -164,7 +162,4 @@ $(function(){
             blackOverlay.toggle();
         }
     });
-
-
-
 });
